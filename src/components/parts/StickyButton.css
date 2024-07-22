@@ -1,0 +1,149 @@
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    StickyButton
+-------------------------------------
+*/
+.sticky {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: var(--sticky__position);
+  right: 0;
+  cursor: pointer;
+  animation: pulse 1s infinite alternate;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+}
+.sticky__cta {
+  width: var(--sticky__width);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.sticky__cta:hover {
+  -webkit-box-shadow: 0 0 0 2px rgba(171, 178, 178, 0.25); /* Safari and older Chrome versions */
+  -moz-box-shadow: 0 0 0 2px rgba(171, 178, 178, 0.25); /* Firefox */
+  -ms-box-shadow: 0 0 0 2px rgba(171, 178, 178, 0.25); /* Internet Explorer */
+  -o-box-shadow: 0 0 0 2px rgba(171, 178, 178, 0.25); /* Opera */
+  box-shadow: 0 0 0 2px rgba(171, 178, 178, 0.25); /* Standard syntax */
+}
+.sticky__cta:hover .sticky__cta--btn {
+  color: #43A3EF;
+}
+.sticky__cta--btn {
+  background-color: transparent;
+  font-family: "Saira Stencil One", sans-serif;
+  font-size: var(--sticky__font-size);
+  font-weight: 300;
+  color: #ABB2B2;
+  border: 0;
+  cursor: pointer;
+  transform: rotate(-90deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.sticky .sticky__cta,
+.sticky .sticky__items {
+  background-color: #262A31;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--sticky__height);
+  border-top-left-radius: var(--content__border-radius);
+  border-bottom-left-radius: var(--content__border-radius);
+}
+.sticky .sticky__items {
+  position: absolute;
+  top: var(--sticky__position);
+  right: calc(-1 * var(--sticky-items__width) - var(--sticky__width));
+  width: var(--sticky-items__width);
+  transform: translateY(-50%);
+  -webkit-transition: right 0.3s ease-in-out;
+  -moz-transition: right 0.3s ease-in-out;
+  -ms-transition: right 0.3s ease-in-out;
+  -o-transition: right 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
+  z-index: -1;
+}
+.sticky .sticky__items .sticky__item {
+  margin: 0 var(--content__space-s);
+}
+.sticky .sticky__items .sticky__item .sticky__link svg {
+  font-size: var(--sticky-icon__size);
+  color: #ABB2B2;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.sticky .sticky__items .sticky__item .sticky__link svg:hover {
+  color: #43A3EF;
+  transform: scale(0.9);
+  -o-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+}
+.sticky .sticky__items .sticky__item .sticky__link.phone:hover::after, .sticky .sticky__items .sticky__item .sticky__link.mail:hover::after {
+  background: transparent;
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  font-size: var(--sticky-signature__font-size);
+  font-weight: 400;
+  color: #43A3EF;
+  width: var(--sticky-items__width);
+  text-align: center;
+  transform: translateX(-50%);
+}
+.sticky .sticky__items .sticky__item .sticky__link.phone:hover:after {
+  content: "+48 731 540 795";
+}
+.sticky .sticky__items .sticky__item .sticky__link.mail:hover:after {
+  content: "michal.lukaszewicz.dev@gmail.com";
+}
+.sticky.clicked {
+  animation: none;
+  transform: translateY(-50%);
+}
+.sticky.clicked .sticky__cta {
+  width: var(--sticky__width--clicked);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 2px solid #21252B;
+  box-shadow: none;
+}
+.sticky.clicked .sticky__cta--btn {
+  transform: rotate(0);
+}
+.sticky.clicked .sticky__items {
+  right: var(--sticky__width--clicked);
+}
+.sticky.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1) translateY(-50%);
+  }
+  to {
+    transform: scale(1.1) translateY(-50%);
+  }
+}
+
+/*# sourceMappingURL=StickyButton.css.map */

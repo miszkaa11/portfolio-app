@@ -1,0 +1,30 @@
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    PrivacyPolicy
+-------------------------------------
+*/
+.privacy-policy {
+  margin-bottom: var(--section__space);
+}
+.privacy-policy .info__content .info__header {
+  margin: var(--content__space-s) 0;
+}
+.privacy-policy .info__content .info__text.margined {
+  margin-top: var(--content__space-s);
+}
+.privacy-policy .info__content .info__list {
+  list-style: disc;
+}
+.privacy-policy .info__content .info__list .info__item {
+  font-weight: 300;
+  margin-left: var(--content__space-m);
+}
+
+/*# sourceMappingURL=PrivactPolicy.css.map */

@@ -1,0 +1,78 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/*
+    Normalize
+-------------------------------------
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, code {
+  font-family: $font-style__primary;
+}
+
+body {
+  background-color: $color__gray-dark;
+  font-size: var(--font-size__global);
+  font-weight: $font-weight__light;
+  color: $color__gray;
+  margin: 0;
+
+  // Prefixes
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-weight: $font-weight__regular;
+  margin: 0;
+}
+
+h1, h2, h3  {
+  color: $color__orange;
+}
+
+p {
+  margin: var(--content__text-spacing-m) 0;
+}
+
+a {
+  font-weight: $font-weight__regular;
+  color: $color__orange;
+  text-decoration: none;
+  word-wrap: break-word;
+  cursor: pointer;
+  @include transition();
+  &:visited,
+  &:focus,
+  &:active {
+    color: $color__orange;
+  }
+  @media (hover: hover) {
+    &:hover {
+      color: $color__blue-light;
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+img:not(.site-logo) {
+  width: 100%;
+  height: auto;
+  border-radius: var(--content__border-radius);
+  object-fit: cover;
+  @include transition();
+  &:hover {
+    @include box-shadow(0 0 0 2px rgba(171, 178, 178, 0.25));
+  }
+}

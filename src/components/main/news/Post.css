@@ -1,0 +1,24 @@
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    Post
+-------------------------------------
+*/
+.post {
+  margin-bottom: var(--section__space);
+}
+.post .post__content {
+  background-color: #262A31;
+  border-radius: var(--content__border-radius);
+}
+.post .post__content .post__entry {
+  padding: var(--content-box__spacing);
+}
+
+/*# sourceMappingURL=Post.css.map */

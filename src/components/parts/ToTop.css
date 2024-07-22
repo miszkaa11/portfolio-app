@@ -1,0 +1,58 @@
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    ToTop
+-------------------------------------
+*/
+.to-top {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  bottom: var(--to-top__position);
+  right: var(--to-top__position);
+  cursor: pointer;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.to-top__btn {
+  background-color: #262A31;
+  font-size: var(--font-size__text);
+  font-weight: 700;
+  color: #ABB2B2;
+  border: 0;
+  border-radius: var(--button__border-radius);
+  width: var(--to-top__size);
+  height: var(--to-top__size);
+  opacity: 0.9;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.to-top__btn:hover {
+  color: #43A3EF;
+  -webkit-box-shadow: var(--content__box-shadow); /* Safari and older Chrome versions */
+  -moz-box-shadow: var(--content__box-shadow); /* Firefox */
+  -ms-box-shadow: var(--content__box-shadow); /* Internet Explorer */
+  -o-box-shadow: var(--content__box-shadow); /* Opera */
+  box-shadow: var(--content__box-shadow); /* Standard syntax */
+}
+.to-top__btn svg {
+  font-size: var(--to-top-icon__size);
+}
+.to-top__btn.in-footer {
+  background-color: #21252B;
+}
+.to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*# sourceMappingURL=ToTop.css.map */

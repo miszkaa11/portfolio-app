@@ -1,0 +1,66 @@
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    Footer
+-------------------------------------
+*/
+.footer {
+  background-color: #262A31;
+  padding: calc(var(--section__space) / 2) 0;
+}
+.footer .icons__items {
+  justify-content: space-evenly;
+  margin: var(--icons__space) 0;
+}
+.footer .icons__items .icons__item {
+  margin: 0;
+}
+.footer .icons__items .icons__item svg {
+  font-size: var(--icons-footer__size);
+}
+.footer .icons__items .icons__item svg:hover.google {
+  color: #4285F4;
+}
+.footer .icons__items .icons__item svg:hover.linkedin {
+  color: #2867B2;
+}
+.footer .icons__items .icons__item svg:hover.github {
+  color: #2dba4e;
+}
+.footer__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__content .divider {
+  color: #ABB2B2;
+  font-weight: 700;
+  margin: 0 var(--content__space-s);
+}
+
+/*
+    Footer
+-------------------------------------
+*/
+@media screen and (max-width: 599px) {
+  .footer .footer__content {
+    flex-direction: column;
+  }
+  .footer .footer__content .privacy-policy-pilot {
+    margin-bottom: var(--content__space-xs-mobile);
+  }
+  .footer .footer__content .divider {
+    display: none;
+  }
+  .footer .icons__items .icons__item {
+    flex-basis: 25%;
+  }
+}
+
+/*# sourceMappingURL=Footer.css.map */
