@@ -1,0 +1,82 @@
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    Icons
+-------------------------------------
+*/
+.icons__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icons__items svg {
+  font-size: var(--icons__size);
+  color: #000000;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.icons__items svg:hover.js {
+  color: #F4BF75;
+}
+.icons__items svg:hover.react {
+  color: #194D33;
+}
+.icons__items svg:hover.html {
+  color: #AB7558;
+}
+.icons__items svg:hover.sass {
+  color: #CC6699;
+}
+.icons__items svg:hover.wp {
+  color: #21759B;
+}
+.icons__items svg:hover.git {
+  color: #F1502F;
+}
+.icons__items:has(svg:hover) > .icons__item svg:hover {
+  transform: scale(1.1);
+}
+.icons__items:has(svg:hover) > .icons__item svg:not(:hover) {
+  transform: scale(0.7);
+  opacity: 0.5;
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+@media screen and (max-width: 1564px) {
+  .icons__items {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 999px) {
+  .icons__items {
+    flex-wrap: wrap;
+  }
+  .icons__items .icons__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: var(--icons__division);
+  }
+  .icons__items .icons__item:nth-child(1), .icons__items .icons__item:nth-child(2), .icons__items .icons__item:nth-child(3) {
+    margin-bottom: var(--icons__space);
+  }
+}
+@media screen and (max-width: 599px) {
+  .icons__items .icons__item:nth-child(4) {
+    margin-bottom: var(--icons__space);
+  }
+}
+
+/*# sourceMappingURL=Icons.css.map */

@@ -1,0 +1,88 @@
+@use "../../assets/scss/abstracts/variables" as *;
+@use "../../assets/scss/abstracts/mixins" as *;
+
+/*
+    Icons
+-------------------------------------
+*/
+
+.icons {
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg {
+      font-size: var(--icons__size);
+      color: $color__black;
+      @include transition();
+      &:hover {
+        &.js {
+          color: $color__javascript;
+        }
+        &.react {
+          color: $color__react;
+        }
+        &.html {
+          color: $color__html-5;
+        }
+        &.sass {
+          color: $color__sass;
+        }
+        &.wp {
+          color: $color__wordpress;
+        }
+        &.git {
+          color: $color__git;
+        }
+      }
+    }
+    &:has(svg:hover) {
+      > .icons__item {
+        svg {
+          &:hover {transform: scale(1.1);}
+          &:not(:hover) {
+            transform: scale(.7);
+            opacity: .5;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+
+@media screen and (max-width: 1564px) {
+  .icons__items {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .icons__items {
+    flex-wrap: wrap;
+    .icons__item {
+      @include flex-center();
+      flex-basis: var(--icons__division);
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-bottom: var(--icons__space);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .icons__items {
+    .icons__item {
+      &:nth-child(4) {
+        margin-bottom: var(--icons__space);
+      }
+    }
+  }
+}
+

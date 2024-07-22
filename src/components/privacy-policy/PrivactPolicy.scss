@@ -1,0 +1,21 @@
+@use "../../assets/scss/abstracts/variables" as *;
+@use "../../assets/scss/abstracts/mixins" as *;
+
+/*
+    PrivacyPolicy
+-------------------------------------
+*/
+
+.privacy-policy {
+  margin-bottom: var(--section__space);
+  .info__content {
+    .info__header {margin: var(--content__space-s) 0;}
+    .info__text.margined{margin-top: var(--content__space-s);}
+    .info__list {list-style: disc;
+      .info__item {
+        font-weight: $font-weight__light;
+        margin-left: var(--content__space-m);
+      }
+    }
+  }
+}

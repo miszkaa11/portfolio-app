@@ -1,0 +1,66 @@
+@use "../../assets/scss/abstracts/variables" as *;
+@use "../../assets/scss/abstracts/mixins" as *;
+
+/*
+    Footer
+-------------------------------------
+*/
+
+.footer {
+  background-color: $color__gray-light;
+  padding: calc(var(--section__space) / 2) 0;
+  .icons__items {
+    justify-content: space-evenly;
+    margin: var(--icons__space) 0;
+    .icons__item {
+      margin: 0;
+      svg {
+        font-size: var(--icons-footer__size);
+        &:hover {
+          &.google {
+            color: $color__google;
+          }
+          &.linkedin {
+            color: $color__linkedin;
+          }
+          &.github {
+            color: $color__github;
+          }
+        }
+      }
+    }
+  }
+  &__content {
+    @include flex-center();
+    .divider {
+      color: $color__gray;
+      font-weight: $font-weight__bold;
+      margin: 0 var(--content__space-s);
+    }
+  }
+}
+
+/*
+    Footer
+-------------------------------------
+*/
+
+@media screen and (max-width: 599px) {
+  .footer {
+    .footer__content {
+      flex-direction: column;
+      .privacy-policy-pilot {
+        margin-bottom: var(--content__space-xs-mobile);
+      }
+      .divider {
+        display: none;
+      }
+    }
+    .icons__items {
+      .icons__item {
+        flex-basis: 25%;
+      }
+    }
+  }
+}
+

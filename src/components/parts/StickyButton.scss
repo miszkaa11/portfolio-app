@@ -1,0 +1,131 @@
+@use "../../assets/scss/abstracts/variables" as *;
+@use "../../assets/scss/abstracts/mixins" as *;
+
+/*
+    StickyButton
+-------------------------------------
+*/
+
+.sticky {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: var(--sticky__position);
+  right: 0;
+  cursor: pointer;
+  animation: pulse 1s infinite alternate;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+  &__cta {
+    width: var(--sticky__width);
+    @include transition();
+    &:hover {
+      @include box-shadow(0 0 0 2px rgba(171, 178, 178, 0.25));
+      .sticky__cta--btn {
+        color: $color__blue-light;
+      }
+    }
+    &--btn {
+      background-color: transparent;
+      font-family: $font-style__secondary;
+      font-size: var(--sticky__font-size);
+      font-weight: $font-weight__light;
+      color: $color__gray;
+      border: 0;
+      cursor: pointer;
+      transform: rotate(-90deg);
+      @include transition();
+    }
+  }
+  .sticky__cta,
+  .sticky__items {
+    background-color: $color__gray-light;
+    @include flex-center();
+    height: var(--sticky__height);
+    border-top-left-radius: var(--content__border-radius);
+    border-bottom-left-radius: var(--content__border-radius);
+  }
+  .sticky__items {
+    position: absolute;
+    top: var(--sticky__position);
+    right: calc(-1 * var(--sticky-items__width) - var(--sticky__width));
+    width: var(--sticky-items__width);
+    transform: translateY(-50%);
+    @include transition(right);
+    z-index: -1;
+    .sticky__item {
+      margin: 0 var(--content__space-s);
+      .sticky__link {
+        svg {
+          font-size: var(--sticky-icon__size);
+          color: $color__gray;
+          @include transition();
+          &:hover {
+            color: $color__blue-light;
+            @include scale();
+          }
+        }
+        &.phone,
+        &.mail {
+          &:hover {
+            &::after {
+              background: transparent;
+              content: "";
+              position: absolute;
+              bottom: 1rem;
+              left: 50%;
+              font-size: var(--sticky-signature__font-size);
+              font-weight: $font-weight__regular;
+              color: $color__blue-light;
+              width: var(--sticky-items__width);
+              text-align: center;
+              transform: translateX(-50%);
+            }
+          }
+        }
+        &.phone {
+          &:hover {
+            &:after {
+              content: "+48 731 540 795";
+            }
+          }
+        }
+        &.mail {
+          &:hover {
+            &:after {
+              content: "michal.lukaszewicz.dev@gmail.com";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.clicked {
+    animation: none;
+    transform: translateY(-50%);
+    .sticky__cta {
+      width: var(--sticky__width--clicked);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left: 2px solid $color__gray-dark;
+      box-shadow: none;
+      &--btn {
+        transform: rotate(0);
+      }
+    }
+    .sticky__items {
+      right: var(--sticky__width--clicked);
+    }
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Animation
+@keyframes pulse {
+  from {transform: scale(1) translateY(-50%);}
+  to {transform: scale(1.1) translateY(-50%);}
+}

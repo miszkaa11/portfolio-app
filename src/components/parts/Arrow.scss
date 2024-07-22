@@ -1,0 +1,29 @@
+@use "../../assets/scss/abstracts/variables" as *;
+@use "../../assets/scss/abstracts/mixins" as *;
+
+/*
+    Arrow
+-------------------------------------
+*/
+
+.arrow {
+  @include flex-center();
+  &__btn {
+    background-color: $color__orange;
+    @include flex-center();
+    width: var(--arrow__width);
+    height: var(--arrow__height);
+    border-radius: var(--button__border-radius);
+    &:hover {
+      background-color: transparent;
+      svg {
+        color: $color__blue-light;
+      }
+    }
+    svg {
+      font-size: var(--arrow__font-size);
+      color: $color__gray-dark;
+      @include transition();
+    }
+  }
+}

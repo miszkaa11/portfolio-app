@@ -1,0 +1,44 @@
+@use "../../assets/scss/abstracts/variables" as *;
+@use "../../assets/scss/abstracts/mixins" as *;
+
+/*
+    ToTop
+-------------------------------------
+*/
+
+.to-top {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  bottom: var(--to-top__position);
+  right: var(--to-top__position);
+  cursor: pointer;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  &__btn {
+    background-color: $color__gray-light;
+    font-size: var(--font-size__text);
+    font-weight: $font-weight__bold;
+    color: $color__gray;
+    border: 0;
+    border-radius: var(--button__border-radius);
+    width: var(--to-top__size);
+    height: var(--to-top__size);
+    opacity: 0.9;
+    cursor: pointer;
+    @include transition();
+    &:hover {
+      color: $color__blue-light;
+      @include box-shadow(var(--content__box-shadow));
+    }
+    svg {
+      font-size: var(--to-top-icon__size);
+    }
+    &.in-footer {
+      background-color: $color__gray-dark;
+    }
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}

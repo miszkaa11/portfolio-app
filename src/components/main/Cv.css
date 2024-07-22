@@ -1,0 +1,31 @@
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    CV
+-------------------------------------
+*/
+.cv__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cv__content .cv__inner {
+  text-align: center;
+}
+.cv__content .cv__inner .cv__text {
+  color: #ABB2B2;
+  font-weight: 300;
+  margin-top: var(--content__space-s);
+}
+.cv__content .cv__inner .cv__link svg {
+  font-size: var(--cv-icon__size);
+  margin: 0 var(--content__space-m);
+}
+
+/*# sourceMappingURL=Cv.css.map */

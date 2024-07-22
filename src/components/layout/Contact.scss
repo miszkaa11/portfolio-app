@@ -1,0 +1,118 @@
+@use "../../assets/scss/abstracts/variables" as *;
+@use "../../assets/scss/abstracts/mixins" as *;
+
+/*
+    Contact
+-------------------------------------
+*/
+
+.contact {
+  margin-bottom: var(--section__space);
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    .contact__inner {
+      &:nth-child(1) {
+        flex-basis: var(--section__division-l);
+      }
+      &:nth-child(2) {
+        flex-basis: var(--section__division-s);
+      }
+      .contact__info {
+        display: flex;
+        align-items: center;
+        &:nth-child(1) {
+          margin-bottom: var(--content__space-s);
+        }
+        .contact__header {
+          font-weight: $font-weight__light;
+          color: $color__gray;
+        }
+        svg {
+          color: $color__orange;
+          margin-right: var(--content__space-xs);
+        }
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        label {
+          margin-bottom: var(--label__space);
+          &:nth-child(4),
+          &:nth-child(5) {
+            margin: 0;
+          }
+          &.checkbox {
+            margin-top: var(--content__space-m);
+          }
+        }
+        .consent {
+          opacity: 0;
+          height: 0;
+          overflow: hidden;
+          transition: opacity 0.5s ease, height 0.5s ease;
+          &__text {
+            margin-bottom: var(--content__space-m);
+          }
+          &__btn {
+            font-family: $font-style__secondary;
+            background-color: transparent;
+            font-size: var(--consent__font-size);
+            font-weight: $font-weight__light;
+            text-decoration: underline;
+            text-align: left;
+            color: $color__gray;
+            border: 0;
+            cursor: pointer;
+            padding: 0;
+            margin: var(--content__space-m) 0;
+          }
+          &.show {
+            opacity: 1;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+
+@media screen and (max-width: 1199px) {
+  .contact {
+    .contact__content {
+      .contact__inner {
+        &:nth-child(1),
+        &:nth-child(2) {
+          flex-basis: 45%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact {
+    .contact__content {
+      flex-direction: column;
+      .contact__inner {
+        &:nth-child(1) {
+          margin-bottom: var(--content__space-m-mobile);
+        }
+        &:nth-child(1),
+        &:nth-child(2) {
+          flex-basis: 100%;
+        }
+        form {
+          .cta {
+            @include flex-center();
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    DetailView
+-------------------------------------
+*/
+.detail-view {
+  margin-bottom: var(--section__space);
+}
+.detail-view .detail-view__content {
+  background-color: #262A31;
+  border-radius: var(--content__border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.detail-view .detail-view__content .detail-view__inner {
+  padding: var(--content-box__spacing);
+}
+.detail-view .detail-view__content .detail-view__inner .type {
+  text-align: center;
+  margin-bottom: var(--content__space-l);
+}
+.detail-view .detail-view__content .detail-view__inner .type:last-of-type {
+  margin-bottom: 0;
+}
+.detail-view .detail-view__content .slider .splide .splide__arrows .splide__arrow {
+  background: #21252B;
+  border-radius: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.detail-view .detail-view__content .slider .splide .splide__arrows .splide__arrow--next {
+  right: 1rem;
+}
+.detail-view .detail-view__content .slider .splide .splide__arrows .splide__arrow--prev {
+  left: 1rem;
+}
+.detail-view .detail-view__content .slider .splide .splide__arrows .splide__arrow svg {
+  fill: #FFFFFF;
+}
+.detail-view .detail-view__content .slider .splide .splide__track {
+  padding: 2px !important;
+}
+
+/*# sourceMappingURL=DetailView.css.map */

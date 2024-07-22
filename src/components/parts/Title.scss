@@ -1,0 +1,28 @@
+@use "../../assets/scss/abstracts/variables" as *;
+@use "../../assets/scss/abstracts/mixins" as *;
+
+/*
+    Title
+-------------------------------------
+*/
+
+.title {
+  @include flex-center();
+  flex-direction: column;
+  &.primary {
+    margin: var(--title__spacing-m);
+  }
+  &.secondary {
+    margin: calc(var(--navigation__height) + var(--section__space)) 0 var(--section__space) 0;
+  }
+  &__header {
+    &:nth-child(1) {
+      font-family: $font-style__secondary;
+      margin-bottom: var(--content__space-xs);
+    }
+    &:nth-child(2) {
+      color: $color__gray;
+      margin-bottom: var(--content__space-s);
+    }
+  }
+}

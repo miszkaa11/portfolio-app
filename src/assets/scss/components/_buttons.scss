@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/*
+    Buttons
+-------------------------------------
+*/
+
+.btn {
+  @include flex-center();
+  background-color: $color__orange;
+  font-weight: $font-weight__bold;
+  color: $color__gray-dark;
+  border-radius: var(--button__border-radius);
+  cursor: pointer;
+  border: none;
+  @include transition();
+  &.primary {
+    font-size: var(--button__font-size--primary);
+    width: var(--button__width--primary);
+    height: var(--button__height--primary);
+    svg {
+      margin-left: var(--icon__space--primary);
+    }
+  }
+  &.secondary {
+    font-size: var(--button__font-size--secondary);
+    width: var(--button__width--secondary);
+    height: var(--button__height--secondary);
+    svg {
+      margin-left: var(--icon__space--secondary);
+    }
+  }
+  &:hover {
+    background-color: $color__gray-dark;
+    color: $color__blue-light;
+    margin-left: var(--content__space-xs);
+  }
+}

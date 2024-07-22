@@ -1,0 +1,43 @@
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    Arrow
+-------------------------------------
+*/
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow__btn {
+  background-color: #D19A5E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--arrow__width);
+  height: var(--arrow__height);
+  border-radius: var(--button__border-radius);
+}
+.arrow__btn:hover {
+  background-color: transparent;
+}
+.arrow__btn:hover svg {
+  color: #43A3EF;
+}
+.arrow__btn svg {
+  font-size: var(--arrow__font-size);
+  color: #21252B;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/*# sourceMappingURL=Arrow.css.map */

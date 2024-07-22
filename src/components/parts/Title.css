@@ -1,0 +1,34 @@
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    Title
+-------------------------------------
+*/
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title.primary {
+  margin: var(--title__spacing-m);
+}
+.title.secondary {
+  margin: calc(var(--navigation__height) + var(--section__space)) 0 var(--section__space) 0;
+}
+.title__header:nth-child(1) {
+  font-family: "Saira Stencil One", sans-serif;
+  margin-bottom: var(--content__space-xs);
+}
+.title__header:nth-child(2) {
+  color: #ABB2B2;
+  margin-bottom: var(--content__space-s);
+}
+
+/*# sourceMappingURL=Title.css.map */

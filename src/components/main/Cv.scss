@@ -1,0 +1,27 @@
+@use "../../assets/scss/abstracts/variables" as *;
+@use "../../assets/scss/abstracts/mixins" as *;
+
+/*
+    CV
+-------------------------------------
+*/
+
+.cv {
+  &__content  {
+    @include flex-center();
+    .cv__inner {
+      text-align: center;
+      .cv__text {
+        color: $color__gray;
+        font-weight: $font-weight__light;
+        margin-top: var(--content__space-s);
+      }
+      .cv__link {
+        svg {
+          font-size: var(--cv-icon__size);
+          margin: 0 var(--content__space-m);
+        }
+      }
+    }
+  }
+}

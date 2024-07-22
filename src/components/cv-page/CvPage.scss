@@ -1,0 +1,160 @@
+@use "../../assets/scss/abstracts/variables" as *;
+@use "../../assets/scss/abstracts/mixins" as *;
+
+/*
+    CvPage
+-------------------------------------
+*/
+
+.cv-page {
+  margin-bottom: var(--section__space);
+  &__content {
+    .cv-title {
+      margin: var(--content__space-s) 0;
+    }
+
+    // Personal
+    .personal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__thumbnail {
+        flex-basis: 30%;
+      }
+      &__info {
+        flex-basis: 60%;
+        &--item {
+          display: flex;
+          align-items: center;
+          margin-bottom: var(--content__space-xs);
+          &:nth-child(1) {
+            margin-bottom: var(--content__space-l);
+          }
+          .personal__header {
+            &.name {color: $color__white;}
+          }
+          label {
+            font-weight: $font-weight__regular;
+            color: $color__orange;
+            margin-right: var(--content__space-xs);
+          }
+        }
+      }
+    }
+
+    // Description
+    .description {
+      &__text {
+        font-weight: $font-weight__regular;
+        color: $color__blue-light;
+        margin: var(--content__space-s) 0;
+        &:last-of-type {margin: 0;}
+      }
+    }
+
+    // Experience
+    .experience {
+      &__text {
+        color: $color__orange;
+      }
+      .cta__text {
+        margin-top: var(--content__space-s);
+      }
+      .cta__link {
+        display: block;
+        color: $color__white;
+        width: fit-content;
+        margin-top: var(--content__space-s);
+        &:hover {
+          color: $color__blue-light;
+        }
+      }
+    }
+
+    // Technologies
+    .technologies {
+      display: flex;
+      align-items: center;
+      margin: var(--content__space-l) 0;
+      .cv-title {
+        margin-right: var(--content__space-l);
+      }
+      .icons__items {
+        width: 100%;
+        .icons__item {
+          svg {
+            color: $color__orange;
+          }
+        }
+      }
+    }
+
+    // Stack
+    .stack {
+      display: flex;
+      .cv-title {
+        margin-top: 0;
+      }
+      .wp-stack {
+        margin-right: 33%;
+      }
+      .wp-stack,
+      .front-stack {
+        .stack__text {color: $color__orange;}
+      }
+    }
+
+    // Agreement
+    .agreement {
+      margin-top: var(--content__space-l);
+      &__text {color: $color__orange;}
+    }
+  }
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+
+@media screen and (max-width: 999px) {
+  .cv-page {
+    .cv-page__content {
+      .technologies {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .stack {
+        .wp-stack {
+          margin-right: 10%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .cv-page {
+    .cv-page__content {
+      .personal {
+        flex-direction: column;
+        &__thumbnail,
+        &__info {
+          flex-basis: 100%;
+          width: 100%;
+        }
+        &__thumbnail {
+          margin-bottom: var(--content__space-s-mobile);
+          img {
+            max-height: 625px;
+            object-fit: cover;
+            object-position: 0 0;
+          }
+        }
+        &__info {
+          .personal__item {margin: 0;}
+        }
+      }
+    }
+  }
+}

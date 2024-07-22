@@ -1,0 +1,46 @@
+@use "../../../assets/scss/abstracts/variables" as *;
+@use "../../../assets/scss/abstracts/mixins" as *;
+
+/*
+    DetailView
+-------------------------------------
+*/
+
+.detail-view {
+  margin-bottom: var(--section__space);
+  .detail-view__content {
+    background-color: $color__gray-light;
+    border-radius: var(--content__border-radius);
+    @include flex-center();
+    flex-direction: column;
+    .detail-view__inner {
+      padding: var(--content-box__spacing);
+      .type {
+        text-align: center;
+        margin-bottom: var(--content__space-l);
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .slider {
+      .splide {
+        .splide__arrows {
+          .splide__arrow {
+            background: $color__gray-dark;
+            border-radius: 0;
+            @include transition();
+            &--next {right: 1rem;}
+            &--prev {left: 1rem;}
+            svg {
+              fill: $color__white;
+            }
+          }
+        }
+        .splide__track {
+          padding: 2px !important;
+        }
+      }
+    }
+  }
+}

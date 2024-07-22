@@ -1,0 +1,18 @@
+@use "../../../assets/scss/abstracts/variables" as *;
+@use "../../../assets/scss/abstracts/mixins" as *;
+
+/*
+    Post
+-------------------------------------
+*/
+
+.post {
+  margin-bottom: var(--section__space);
+  .post__content {
+    background-color: #262A31;
+    border-radius: var(--content__border-radius);
+    .post__entry {
+      padding: var(--content-box__spacing);
+    }
+  }
+}

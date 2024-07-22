@@ -1,0 +1,56 @@
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    About
+-------------------------------------
+*/
+.about .info__content {
+  background-color: #262A31;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--content__border-radius);
+}
+.about .info__content .info__inner {
+  max-height: var(--content__max-height);
+}
+.about .info__content .info__inner .info__header {
+  font-family: "Saira Stencil One", sans-serif;
+}
+.about .info__content .info__inner .info__header,
+.about .info__content .info__inner .info__text {
+  margin-bottom: var(--content__space-s);
+}
+.about .info__content .info__inner:nth-child(1) {
+  display: flex;
+  flex-basis: var(--section__division-s);
+}
+.about .info__content .info__inner:nth-child(1) img {
+  height: var(--image__height);
+  object-position: var(--image__position);
+}
+.about .info__content .info__inner:nth-child(2) {
+  flex-basis: var(--section__division-xl);
+  padding: var(--content-box__spacing);
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+@media screen and (max-width: 650px) {
+  .about .info__content {
+    flex-direction: column;
+  }
+  .about .info__content .info__inner:nth-child(1) {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=About.css.map */

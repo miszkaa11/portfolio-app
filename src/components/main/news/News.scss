@@ -1,0 +1,48 @@
+@use "../../../assets/scss/abstracts/variables" as *;
+@use "../../../assets/scss/abstracts/mixins" as *;
+
+/*
+    News
+-------------------------------------
+*/
+
+.news {
+  &__content {
+    .news__item {
+      background-color: $color__gray-light;
+      display: flex;
+      justify-content: space-between;
+      height: var(--gallery-card__height);
+      border-radius: var(--content__border-radius);
+      margin-bottom: var(--section__space);
+      &--description {
+        padding: var(--content-box__spacing);
+        flex-basis: var(--section__division-s);
+        .posted-on {
+          display: flex;
+          &__text,
+          &__link {
+            font-family: $font-style__secondary;
+          }
+          &__text {
+            margin-right: var(--content__space-xs);
+          }
+        }
+        .posted-on,
+        .posted-title,
+        .posted-content,
+        .posted-cta {
+          margin-bottom: var(--content__space-s);
+        }
+      }
+      &--thumbnail {
+        flex-basis: var(--section__division-xl);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

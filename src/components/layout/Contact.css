@@ -1,0 +1,107 @@
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    Contact
+-------------------------------------
+*/
+.contact {
+  margin-bottom: var(--section__space);
+}
+.contact__content {
+  display: flex;
+  justify-content: space-between;
+}
+.contact__content .contact__inner:nth-child(1) {
+  flex-basis: var(--section__division-l);
+}
+.contact__content .contact__inner:nth-child(2) {
+  flex-basis: var(--section__division-s);
+}
+.contact__content .contact__inner .contact__info {
+  display: flex;
+  align-items: center;
+}
+.contact__content .contact__inner .contact__info:nth-child(1) {
+  margin-bottom: var(--content__space-s);
+}
+.contact__content .contact__inner .contact__info .contact__header {
+  font-weight: 300;
+  color: #ABB2B2;
+}
+.contact__content .contact__inner .contact__info svg {
+  color: #D19A5E;
+  margin-right: var(--content__space-xs);
+}
+.contact__content .contact__inner form {
+  display: flex;
+  flex-direction: column;
+}
+.contact__content .contact__inner form label {
+  margin-bottom: var(--label__space);
+}
+.contact__content .contact__inner form label:nth-child(4), .contact__content .contact__inner form label:nth-child(5) {
+  margin: 0;
+}
+.contact__content .contact__inner form label.checkbox {
+  margin-top: var(--content__space-m);
+}
+.contact__content .contact__inner form .consent {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+.contact__content .contact__inner form .consent__text {
+  margin-bottom: var(--content__space-m);
+}
+.contact__content .contact__inner form .consent__btn {
+  font-family: "Saira Stencil One", sans-serif;
+  background-color: transparent;
+  font-size: var(--consent__font-size);
+  font-weight: 300;
+  text-decoration: underline;
+  text-align: left;
+  color: #ABB2B2;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  margin: var(--content__space-m) 0;
+}
+.contact__content .contact__inner form .consent.show {
+  opacity: 1;
+  height: auto;
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+@media screen and (max-width: 1199px) {
+  .contact .contact__content .contact__inner:nth-child(1), .contact .contact__content .contact__inner:nth-child(2) {
+    flex-basis: 45%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact .contact__content {
+    flex-direction: column;
+  }
+  .contact .contact__content .contact__inner:nth-child(1) {
+    margin-bottom: var(--content__space-m-mobile);
+  }
+  .contact .contact__content .contact__inner:nth-child(1), .contact .contact__content .contact__inner:nth-child(2) {
+    flex-basis: 100%;
+  }
+  .contact .contact__content .contact__inner form .cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=Contact.css.map */

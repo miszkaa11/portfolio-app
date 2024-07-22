@@ -1,0 +1,398 @@
+@use "variables" as *;
+
+/*
+    Root
+-------------------------------------
+*/
+
+:root {
+  // Navigation
+  --navigation__height: 125px;
+  --navigation__height-scrolled: 90px;
+  --navigation__font-size: 1.675rem;
+  --menu-item__spacing: 0 2rem;
+
+  --navigation__width--active: 25%;
+  --navigation__height--active: 100vh;
+
+  --burger__width: 54px;
+  --burger__height: 40px;
+  --burger-line__width: 100%;
+  --burger-line__height: 6px;
+  --burger-line__position: 18px;
+
+  --logo__size: 102px;
+
+  // Section
+  --section__space: 6rem;
+  --section__division-s: 40%;
+  --section__division-m: 45%;
+  --section__division-l: 55%;
+  --section__division-xl: 60%;
+
+  // Content
+  --content__max-width-s: $content__max-width-s;
+  --content__max-width-m: $content__max-width-m;
+  --content__max-width-l: $content__max-width-l;
+  --content__spacing: 0 1rem;
+
+  --content-box__spacing: 2rem 3rem;
+
+  --content__max-height: 831px;
+  --content__space-xs: 0.5rem;
+  --content__space-s: 1rem;
+  --content__space-m: 2rem;
+  --content__space-l: 3rem;
+  --content__border-radius: 1rem;
+  --content__box-shadow: 0 0 0 2px rgba(171, 178, 178, 0.25);
+  // Mobile
+  --content__space-xs-mobile: 0.5rem;
+  --content__space-s-mobile: 1rem;
+  --content__space-m-mobile: 2rem;
+
+  // Fonts
+  --font-style__primary: $font-style__primary;
+  --font-style__secondary: $font-style__secondary;
+
+  // Font size
+  --font-size__global: 1.25rem;
+  --font-size__text: 1.25rem;
+
+  --font-size__header-m: 1.775rem;
+  --font-size__header-l: 2.5rem;
+  --font-size__header-xl: 4.688rem;
+
+  // Font weight
+  --font-weight__light: $font-weight__light;
+  --font-weight__regular: $font-weight__regular;
+  --font-weight__medium: $font-weight__medium;
+  --font-weight__bold: $font-weight__bold;
+
+  // Colors
+  --color__orange: $color__orange;
+  --color__gray: $color__gray;
+  --color__gray-dark: $color__gray-dark;
+  --color__white: $color__white;
+  --color__blue-light: $color__blue-light;
+  --color__black: $color__black;
+
+  // Colors tech
+  --color__javascript: $color__javascript;
+  --color__react: $color__react;
+  --color__html-5: $color__html-5;
+  --color__css-3: $color__css-3;
+  --color__sass: $color__sass;
+  --color__wordpress: $color__wordpress;
+  --color__git: $color__git;
+
+  // Colors socials
+  --color__google: $color__google;
+  --color__linkedin: $color__linkedin;
+  --color__github: $color__github;
+
+  // Arrow
+  --arrow__width: 50px;
+  --arrow__height: 50px;
+  --arrow__font-size: 1.5rem;
+
+  // Title
+  --title__spacing-m: 6rem 0;
+  --title__spacing-l: 12rem 0 6rem 0;
+  --title__space: 1rem;
+
+  // About
+  --image__height: auto;
+
+  // Gallery cards
+  --gallery-card__height: 395px;
+  --gallery-card__max-width: 825px;
+  --gallery-card__max-height: 405px;
+  --gallery-card__order: -1;
+
+  --stack-icon__size: 1.5rem;
+
+  // News cards
+  --news-card__max-height: 346px;
+
+  // Skills
+  --icons__size: 8rem;
+  --icons__space: 3rem;
+
+  // Cv zone
+  --cv-icon__size: 7rem;
+
+  // Gallery template
+  --gallery-template-image__height: 600px;
+  --gallery-template-image__min-width: 135px;
+  --gallery-template-image__margin-top: 5rem;
+
+  // Form
+  --form-input__width: 100%;
+  --form-input__height: 40px;
+  --form-input__border-radius: 0.4rem;
+  --label__space: 1.5rem;
+
+  --textarea__max-width: 600px;
+  --textarea__height: 80px;
+
+  --consent__font-size: 1rem;
+
+  --checkbox__size: 25px;
+
+  // Button
+  --button__font-size--primary: 0.90rem;
+  --button__width--primary: 125px;
+  --button__height--primary: 40px;
+
+  --button__font-size--secondary: 1rem;
+  --button__width--secondary: 175px;
+  --button__height--secondary: 50px;
+
+  --button__border-radius: .6rem;
+  --icon__space--primary: 0.3rem;
+  --icon__space--secondary: 0.5rem;
+
+  // Sticky
+  --sticky__position: 50%;
+  --sticky__font-size: 1.5rem;
+
+  --sticky__width: 50px;
+  --sticky__width--clicked: 150px;
+  --sticky__height: 130px;
+
+  --sticky-items__width: 250px;
+
+  --sticky-signature__font-size: 1rem;
+  --sticky-icon__size: 2.5rem;
+
+  // ToTop
+  --to-top__position: 2rem;
+  --to-top__size: 60px;
+  --to-top-icon__size: 1.75rem;
+
+  // Footer
+  --icons-footer__size: 4rem;
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+
+@media screen and (max-width: 1564px) {
+  :root {
+    // Font size
+    --font-size__global: 1.125rem;
+    --font-size__text: 1.125rem;
+
+    // Skills
+    --icons__size: 7rem;
+
+    // Gallery
+    --gallery-card__height: 345px;
+    --gallery-card__max-height: auto;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  :root {
+    // Navigation
+    --navigation__width--active: 40%;
+
+    --burger__width: 46px;
+    --burger__height: 36px;
+
+    --burger-line__height: 5px;
+
+    // Font size
+    --font-size__header-m: 1.575rem;
+    --font-size__header-l: 2.25rem;
+    --font-size__header-xl: 4rem;
+
+    // Section
+    --section__space: 5rem;
+
+    // Content
+    --content__space-l: 2rem;
+
+    --content-box__spacing: 2rem;
+
+    // Arrow
+    --arrow__font-size: 1.4rem;
+    --arrow__width: 45px;
+    --arrow__height: 45px;
+
+    --title__spacing-m: 5rem 0;
+    --title__spacing-l: 11rem 0 5rem 0;
+
+    // Skills
+    --icons__size: 6rem;
+
+    // Cv zone
+    --cv-icon__size: 6rem;
+
+    // Sticky
+    --sticky__font-size: 1.25rem;
+
+    --sticky__width: 45px;
+    --sticky__width--clicked: 125px;
+    --sticky__height: 115px;
+
+    --sticky-items__width: 215px;
+
+    --sticky-icon__size: 2rem;
+    --sticky-signature__font-size: 0.85rem;
+
+    // ToTop
+    --to-top__position: 1.5rem;
+    --to-top__size: 50px;
+    --to-top-icon__size: 1.5rem;
+
+    // Footer
+    --icons-footer__size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  :root {
+    // Navigation
+    --navigation__height: 100px;
+    --navigation__height-scrolled: 80px;
+    --navigation__font-size: 1.575rem;
+
+    --navigation__width--active: 50%;
+
+    --burger-line__position: 16px;
+
+    // Font size
+    --font-size__global: 1rem;
+    --font-size__text: 1rem;
+
+    // Form
+    --form-input__height: 35px;
+    --label__space: 1.25rem;
+    --checkbox__size: 23px;
+
+    // Buttons
+    --button__height--primary: 35px;
+    --button__height--secondary: 45px;
+
+    // Gallery cards
+    --gallery-card__height: 325px;
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  :root {
+    // Gallery cards
+    --gallery-card__height: 300px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  :root {
+    // Content
+    --content__space-l: 1rem;
+    --content__space-s: 0.5rem;
+
+    --content-box__spacing: 1rem;
+
+    // Font size
+    --font-size__header-m: 1.375rem;
+    --font-size__header-l: 2rem;
+    --font-size__header-xl: 3.75rem;
+
+    // Arrow
+    --arrow__font-size: 1.3rem;
+    --arrow__width: 40px;
+    --arrow__height: 40px;
+
+    // About
+    --image__height: 600px;
+    --image__position: -3.5rem 0;
+
+    // Gallery cards
+    --gallery-card__height: auto;
+    --gallery-card__order: 0;
+    --stack-icon__size: 1.25rem;
+
+    // Skills
+    --icons__division: 33.333%;
+  }
+}
+
+@media screen and (max-width: 849px) {
+  :root {
+    // Font size
+    --font-size__header-m: 1.275rem;
+    --font-size__header-l: 1.875rem;
+    --font-size__header-xl: 3.375rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    // Navigation
+    --navigation__height: 80px;
+    --navigation__height-scrolled: 70px;
+
+    --navigation__width--active: 100%;
+
+    --burger__width: 40px;
+    --burger__height: 32px;
+    --burger-line__position: 11px;
+
+    --logo__size: 80px;
+
+    // Section
+    --section__space: 4rem;
+
+    // Title
+    --title__spacing-m: 4rem 0;
+    --title__spacing-l: 9rem 0 4rem 0;
+
+    // Form
+    --textarea__max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  :root {
+    // Section
+    --section__space: 3rem;
+
+    // Content
+    --section__division-s: auto;
+    --section__division-m: auto;
+    --section__division-l: auto;
+    --section__division-xl: auto;
+
+    // Title
+    --title__spacing-m: 3rem 0;
+    --title__spacing-l: 8rem 0 3rem 0;
+
+    // Font size
+    --font-size__header-xl: 2.575rem;
+
+    // Skills
+    --icons__division: 50%;
+    --icons__space: 2rem;
+    --icons__size: 5rem;
+
+    // Form
+    --form-input__height: 30px;
+
+    --textarea__height: 55px;
+    --checkbox__size: 20px;
+
+    // About
+    --image__height: 500px;
+    --image__position: 0 0;
+
+    // Cv zone
+    --cv-icon__size: 5rem;
+
+    // Footer
+    --icons-footer__size: 2.5rem;
+  }
+}

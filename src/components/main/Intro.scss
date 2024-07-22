@@ -1,0 +1,33 @@
+@use "../../assets/scss/abstracts/variables" as *;
+@use "../../assets/scss/abstracts/mixins" as *;
+
+/*
+    Intro
+-------------------------------------
+*/
+
+.intro {
+  height: 100vh;
+  &__content {
+    @include flex-center();
+    height: 100%;
+    text-align: center;
+    .intro__inner {
+      .intro__header {
+        margin-bottom: var(--content__space-s);
+        &:nth-child(1) {
+          font-family: $font-style__secondary;
+        }
+        &:nth-child(3) {
+          color: $color__blue-light;
+        }
+      }
+      .arrow {
+        &__btn {
+          width: calc(var(--arrow__width) + 5px);
+          height: calc(var(--arrow__height) + 5px);
+        }
+      }
+    }
+  }
+}

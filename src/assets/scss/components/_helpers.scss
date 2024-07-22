@@ -1,0 +1,16 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/root' as *;
+@use '../abstracts/variables' as *;
+
+/*
+    Helpers
+-------------------------------------
+*/
+
+.d-flex {
+  display: flex;
+}
+
+.bolded {
+  font-weight: $font-weight__bold;
+}
